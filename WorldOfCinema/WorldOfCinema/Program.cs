@@ -54,7 +54,7 @@ namespace WorldOfCinema
         /// <summary>
         /// Сеанс фильма
         /// </summary>
-        public List<Halls> WhichCinemaHall = new List<Halls>(7);
+        public string WhichCinemaHall { get; set; }
         /// <summary>
         /// Какой залл в кинотеатре
         /// </summary>
@@ -66,5 +66,9 @@ namespace WorldOfCinema
         {
             return $"Какой залл в кинотеатре: {WhichCinemaHall}, Время данного фильма: {MovieTime}";
         }
+        public List<Staff> Staff { get; set; }
+        /// <summary>
+        /// Кто работает в эту смену
+        /// </summary>
     }
 }
