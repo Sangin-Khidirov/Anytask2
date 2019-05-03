@@ -42,7 +42,7 @@ namespace WorldOfCinema
         /// Заллы кинотеатра
         /// </summary>
 
-        public readonly int halls = 7; // наличие заллов в кинотеатре
+        public readonly int Halls = 7; // наличие заллов в кинотеатре
         public bool Seats { get; } // места в залле (заняты или нет)
         public override string ToString()
         {
@@ -54,11 +54,11 @@ namespace WorldOfCinema
         /// <summary>
         /// Сеанс фильма
         /// </summary>
-        public string WhichCinemaHall { get; set; }
+        public List<Halls> WhichCinemaHall = new List<Halls>(7);
         /// <summary>
         /// Какой залл в кинотеатре
         /// </summary>
-        public string MovieTime { get; set; }
+        public DateTime MovieTime { get; set; }
         /// <summary>
         /// Время данного фильма
         /// </summary>
