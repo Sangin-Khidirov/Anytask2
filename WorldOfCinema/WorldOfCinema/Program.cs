@@ -1,74 +1,37 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace WorldOfCinema
 {
-    class Program
+    static class Program
     {
-        static void Main(string[] args)
+        static public bool checker = true;
+        /// <summary>
+        /// Главная точка входа для приложения.
+        /// </summary>
+        [STAThread]
+        static void Main()
         {
-        }
-    }
-    public class Staff
-    {
-        /// <summary>
-        /// Имя
-        /// </summary>
-        public string Name { get; set; }
-        /// <summary>
-        /// Должность
-        /// </summary>
-        public string Position { get; set; }
-        /// <summary>
-        /// Стаж
-        /// </summary>
-        public int Status { get; set; }
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
 
-        public override string ToString()
-        {
-            return $"Имя: {Name}, Должность: {Position}, Стаж: {Status}";
+            while (checker)
+            {
+                Application.Run(new Avt());
+                if (Avt.status == "user")
+                {
+                    Application.Run(new Form1());
+                    Avt.status = "done";
+                }
+                if (Avt.status == "admin")
+                {
+                    Application.Run(new ADmin());
+                    Avt.status = "done";
+                }
+            }
         }
-    }
-    public class Cinema
-    {
-        /// <summary>
-        /// Кинотеатр
-        /// </summary>
-        public string CinemaHalls { get; set; }
-        /// <summary>
-        /// Заллы кинотеатра
-        /// </summary>
-
-        public readonly int Halls = 7; // наличие заллов в кинотеатре
-        public bool Seats { get; } // места в залле (заняты или нет)
-        public override string ToString()
-        {
-            return $"Заллы кинотеатра: {CinemaHalls}, Наличие заллов в кинотеатре: {halls} , Места: {Seats}";
-        }
-    }
-    public class SeanceOfFilm
-    {
-        /// <summary>
-        /// Сеанс фильма
-        /// </summary>
-        public string WhichCinemaHall { get; set; }
-        /// <summary>
-        /// Какой залл в кинотеатре
-        /// </summary>
-        public DateTime MovieTime { get; set; }
-        /// <summary>
-        /// Время данного фильма
-        /// </summary>
-        public override string ToString()
-        {
-            return $"Какой залл в кинотеатре: {WhichCinemaHall}, Время данного фильма: {MovieTime}";
-        }
-        public List<Staff> Staff { get; set; }
-        /// <summary>
-        /// Кто работает в эту смену
-        /// </summary>
     }
 }
