@@ -1,0 +1,31 @@
+﻿@model TheWorldOfCinema.Cinema
+
+@{
+    ViewBag.Title = "Склад " + Model.Name;
+    Layout = "_Layout";
+}
+
+<h2>Кинотеатр @Model.Name</h2>
+
+@Model.Adress
+
+<table class="table table-bordered table-responsive table-hover">
+    <thead>
+        <tr>
+            <td>Название</td>
+            <td>Мест</td>
+            <td>Время</td>
+        </tr>
+    </thead>
+    @if (Model.Films != null)
+    {
+        foreach (var film in Model.Films)
+        {
+            <tr>
+                <td>@film.Name</td>
+                <td>@film.Seats</td>
+                <td>@film.Time</td>
+            </tr>
+        }
+    }
+</table>

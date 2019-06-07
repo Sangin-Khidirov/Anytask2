@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.645
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheWorldOfCinema", "TheWorldOfCinema\TheWorldOfCinema.csproj", "{D475D776-A839-4F71-865A-A22BC4D71227}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CinemaWeb", "CinemaWeb\CinemaWeb.csproj", "{62DD1D84-338B-489C-ABE5-25DC7F93C795}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D475D776-A839-4F71-865A-A22BC4D71227}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D475D776-A839-4F71-865A-A22BC4D71227}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D475D776-A839-4F71-865A-A22BC4D71227}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D475D776-A839-4F71-865A-A22BC4D71227}.Release|Any CPU.Build.0 = Release|Any CPU
+		{62DD1D84-338B-489C-ABE5-25DC7F93C795}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{62DD1D84-338B-489C-ABE5-25DC7F93C795}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{62DD1D84-338B-489C-ABE5-25DC7F93C795}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{62DD1D84-338B-489C-ABE5-25DC7F93C795}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F9232AE9-36A2-4FC9-BC85-63CEE828C7FF}
+	EndGlobalSection
+EndGlobal
